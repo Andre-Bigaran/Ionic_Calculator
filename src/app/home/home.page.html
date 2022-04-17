@@ -1,0 +1,101 @@
+<ion-content [fullscreen]="false">
+
+  <div id="container">
+
+    <ion-grid class="grid">
+
+      <ion-row class="nav-bar">
+        <ion-icon name="copy-outline"></ion-icon>
+        <ion-icon class="icon-nav" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-row>
+
+      <ion-row>
+        <div>
+          <p class="result">{{value}}</p>
+        </div>
+      </ion-row>
+
+
+      <div id="painel">
+        <ion-row>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="warning" (click)="clear()">C</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-size" size="block" color="warning"(click)="calculate('/')">÷</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="warning"(click)="calculate('*')">X</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-size" size="block" color="warning"(click)="calculate('-')">-</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('7')">7</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('8')">8</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('9')">9</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-size" size="block" color="warning" (click)="calculate('+')">+</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('4')">4</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('5')">5</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" (click)="viewValue('6')">6</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="warning" (click)="calculate('%')">%</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" expand="Block" (click)="viewValue('1')">1
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" expand="Block" (click)="viewValue('2')">2
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-calc" size="block" color="medium" expand="Block" (click)="viewValue('3')">3
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="button-size" size="block" color="warning" expand="Block" (click)="dotAdd()">.
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col id="button-col">
+            <ion-button  class="button-zero" size="block" color="medium" expand="block" (click)="viewValue('0')">0
+            </ion-button>
+          </ion-col>
+          <ion-col id="button-colTwo">
+            <ion-button class="button-result" size="fullscreen" color="danger" expand="block" (click)="calculate('')">
+              ENTER
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-grid>
+
+  </div>
+
+</ion-content>
